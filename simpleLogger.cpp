@@ -49,10 +49,9 @@ BOOST_LOG_GLOBAL_LOGGER_INIT(logger, src::severity_logger_mt) {
         << expr::format_date_time(timestamp, "%Y-%m-%d, %H:%M:%S.%f") << " "
         << "[" << logging::trivial::severity << "]"
         << " - " << expr::smessage;
-    
     sink->set_formatter(formatter);
 
-    // just log messages with severity >= SEVERITY_THRESHOLD are written
+    // only messages with severity >= SEVERITY_THRESHOLD are written
     sink->set_filter(severity >= SEVERITY_THRESHOLD);
 
     // "register" our sink
