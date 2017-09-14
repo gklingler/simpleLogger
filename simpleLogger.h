@@ -1,7 +1,7 @@
 #ifndef simpleLogger_h__
 #define simpleLogger_h__
 
-#define BOOST_LOG_DYN_LINK 1 // necessary when linking the boost_log library dynamically
+#define BOOST_LOG_DYN_LINK // necessary when linking the boost_log library dynamically
 
 #include <boost/log/trivial.hpp>
 #include <boost/log/sources/global_logger_storage.hpp>
